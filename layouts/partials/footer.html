@@ -1,0 +1,37 @@
+    <div class="footer">
+        <div class="container">
+            <nav class="navbar navbar-light navbar-expand-md">
+                {{- if .Site.Menus.main }}
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
+                        aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                {{- end }}
+                <div class="collapse navbar-collapse" id="main-nav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        {{- range .Site.Menus.footer.ByWeight }}
+                        {{- if not .HasChildren }}
+                        <li class="nav-item">
+                            <a class="nav-link" title="{{ .Title }}" href="{{ .URL }}">{{ .Name }}</a>
+                        </li>
+                        {{- else }}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="{{ .URL }}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ .Name }}</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                {{- range .Children }}
+                                <a class="dropdown-item" title="{{ .Title }}" href="{{ .URL }}">{{ .Pre }}<span>{{ .Name }}</span></a>
+                                {{- end }}
+                            </div>
+                        </li>
+                        {{- end }}
+                        {{- end }}
+                    </ul>
+                </div>
+            </nav>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="lead">🫶, <a href="https://teamraft.com/">Raft</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
