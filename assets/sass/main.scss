@@ -1,0 +1,13 @@
+@import "muicss/lib/sass/mui.scss";
+
+.mui-appbar {
+  a {
+    color: mui-color('white')
+  }
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
