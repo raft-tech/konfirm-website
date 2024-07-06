@@ -1,0 +1,19 @@
+{
+  "name": "konfirm-website",
+  "version": "0.1.0",
+  "description": "Konfirm website and documentation",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raft-tech/konfirm-webiste.git"
+  },
+  "author": "Konfirm Maintainers",
+  "bugs": {
+    "url": "https://github.com/raft-tech/konfirm-webiste/issues"
+  },
+  "homepage": "https://github.com/raft-tech/konfirm-webiste#readme",
+  "dependencies": {
+    "bootstrap-icons": "^1.11.3",
+    "muicss": "^0.10.3"
+  }
+}
